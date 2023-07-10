@@ -27,12 +27,7 @@ app.set('port', process.env.PORT || 3001);
 
 const corsOptions = {
     //To allow requests from client
-    origin: [
-      "http://localhost:3000",
-      "http://127.0.0.1",
-      "http://104.142.122.231",
-      "http://192.168.149.16:3000"
-    ],
+    origin: "*",
     credentials: true,
     exposedHeaders: ["set-cookie"],
   };
