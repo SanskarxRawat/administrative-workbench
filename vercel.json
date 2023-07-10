@@ -1,28 +1,28 @@
 {
-    "builds":[
+    "builds": [
         {
-            "src":"server.js",
-            "use":"@vercel/node"
+            "src": "server.js",
+            "use": "@vercel/node"
         },
         {
-            "src":"build/**",
-            "use":"@vercel/static"
+            "src": "build/**",
+            "use": "@vercel/static"
         }
     ],
-    "routes":[
+    "routes": [
         {
-            "src":"/api/(.*)",
-            "dest":"server.js"
+            "src": "/",
+            "dest": "build/index.html"
         },
         {
-            "src":"/",
-            "dest":"build/index.html"
-
-        },
-        {
-            "src":"/(.+)",
-            "dest":"build/$1"
+            "src": "/(.+)",
+            "dest": "build/$1"
         }
-    
+    ],
+    "rewrites": [
+        {
+            "source": "/(.*)",
+            "destination": "/api"
+        }
     ]
 }
