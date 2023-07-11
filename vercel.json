@@ -19,8 +19,8 @@
             "dest": "build/$1"
         },
         {
-            "source": "/(.*)",
-            "destination": "/api"
+            "src": "/(.*)",
+            "dest": "/api"
         }
     ]
    
