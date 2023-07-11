@@ -11,12 +11,17 @@
     ],
     "routes": [
         {
-          "src": "/",
-          "dest": "build/index.html"
+            "src": "/",
+            "dest": "build/index.html"
+          },
+        {
+          "src": "/(.*)",
+          "dest": "build/static/js"
         },
+        
         {
           "src": "/(.+)",
-          "dest": "build/static/js"
+          "dest": "build/$1"
         }
       ]
    
