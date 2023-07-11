@@ -1,4 +1,10 @@
 {
+    "rewrites": [
+        {
+            "source": "/(.*)",
+            "destination": "/api"
+        }
+    ],
     "builds": [
         {
             "src": "server.js",
@@ -18,11 +24,6 @@
             "src": "/(.+)",
             "dest": "build/$1"
         }
-    ],
-    "rewrites": [
-        {
-            "source": "/(.*)",
-            "destination": "/api"
-        }
     ]
+   
 }
