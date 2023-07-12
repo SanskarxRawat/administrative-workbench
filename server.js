@@ -94,5 +94,3 @@ app.use('/api', require('./routes/routes'));
 app.listen(app.get('port') ,() => {
     console.log(`Server has started and is Listening on Port : ${app.get('port')}`);
 });
-
-module.exports = app;
